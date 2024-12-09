@@ -2,10 +2,10 @@
 chcp 65001 > nul
 
 @REM 変数の定義
-set BUILD_TOOL_PATH="UEのエディターのフォルダ内に格納されてる"
-set PROJECT_PATH="プロジェクトのフォルダパス"
-set VS_MS_BUILD_PATH="VSのMSBuildのパス"
-set BUILD_BATCH_PATH="ビルドバッチファイルのパス"
+set BUILD_TOOL_PATH="D:\UE\UE_5.5\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.exe"
+set PROJECT_PATH="C:\UE\TeamD"
+set VS_MS_BUILD_PATH="C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
+set BUILD_BATCH_PATH="D:\UE\UE_5.5\Engine\Build\BatchFiles\RunUAT.bat"
 set EXPORT_PATH="G:\その他のパソコン\マイ コンピュータ\Artifacts\Team2024\TeamD"
 set GAS_URI="GASのURI"
 
