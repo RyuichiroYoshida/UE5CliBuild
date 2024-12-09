@@ -15,7 +15,7 @@ call :setup
 
 move /Y "%PROJECT_PATH%\TeamA.zip" %EXPORT_PATH%
 if not %errorlevel% == 0 (
-	exit /b 1
+	pause
 )
 
 curl %GAS_URI%
@@ -23,10 +23,6 @@ curl %GAS_URI%
 
 @REM Build前準備サブルーチン
 : setup
-@REM 環境をクリーンにする
-if exist "%PROJECT_PATH%" (
-    rmdir /s /q "%PROJECT_PATH%"
-)
 
 @REM UnrealBuildToolを実行して、プロジェクトのソリューションファイルを生成
 "%BUILD_TOOL_PATH%" -projectfiles -project="%PROJECT_PATH%\TeamD.uproject" -game -rocket -progress
