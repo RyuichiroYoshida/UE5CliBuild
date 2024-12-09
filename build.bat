@@ -10,6 +10,12 @@ set EXPORT_PATH=G:\その他のパソコン\マイ コンピュータ\Artifacts\
 set GAS_URI="GASのURI"
 
 call :setup
+
+@REM 出力フォルダを処理のたびに削除する
+if exist "%PROJECT_PATH%\Build" (
+	rmdir /s /q "%PROJECT_PATH%\Build"
+)
+
 @REM UEプロジェクトをビルド、コンパイル、パッケージングするコマンド
 "%BUILD_BATCH_PATH%" BuildCookRun -rocket -compile -compileeditor -installed -nop4 -project="%PROJECT_PATH%\TeamD.uproject" -cook -stage -archive -archivedirectory="%PROJECT_PATH%\temp\Development\x64" -package -clientconfig=Shipping -ue5exe=UnrealEditor-Cmd.exe -clean -pak -prereqs -nodebuginfo -targetplatform=Win64 -build -utf8output
 
